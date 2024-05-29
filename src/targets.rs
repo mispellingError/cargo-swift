@@ -208,9 +208,8 @@ impl TargetInfo for ApplePlatform {
                 display_name: "iOS Simulator",
                 platform: *self,
             },
-            MacOS => Target::Universal {
-                universal_name: "universal-macos",
-                architectures: nonempty!["x86_64-apple-darwin", "aarch64-apple-darwin"],
+            MacOS => Target::Single {
+                architecture: "aarch64-apple-darwin",
                 display_name: "macOS",
                 platform: *self,
             },
